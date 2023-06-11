@@ -4,10 +4,12 @@ const router=express.Router();
 const registerUser = require("../Controllers/RegisterCtrl");
 const GetAllUsers = require("../Controllers/GetAllUsers");
 const DeleteUser = require("../Controllers/DeleteUser");
+const GetSingleUser = require("../Controllers/GetSingleUser");
+
 // routes are here 
 router.post("/register",registerUser)
 router.get("/all",GetAllUsers)
-router.delete("/delete",DeleteUser)
+router.get("/user/:id",GetSingleUser)
 
 // finally exported  the route
 module.exports=router
